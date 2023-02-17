@@ -8,6 +8,9 @@ const mongoose = require('mongoose');
 const { engine } = require('express-handlebars');
 const passport = require('passport');
 const parseArgs = require('minimist');
+const logger = './loggers/Log4jsLogger.js';
+const loggerMiddleware = './middlewares/routesLogger.middleware.js';
+
 const args = parseArgs(process.argv.slice(2));
 const PORT = args._[0] || 8080;
 
